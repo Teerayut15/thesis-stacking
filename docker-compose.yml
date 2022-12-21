@@ -6,6 +6,7 @@ services:
     ports:
       - 3000:3000
     volumes:
+      - ./research-client/package*.json:/usr/src/app
       - ./research-client:/usr/src/app
 
   node:
@@ -13,6 +14,7 @@ services:
     ports:
       - 3001:3001
     volumes:
+      - ./research-server/package*.json:/usr/src/app
       - ./research-server:/usr/src/app
   
   mysqldb:
