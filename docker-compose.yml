@@ -3,11 +3,11 @@ version: '1'
 services:
   react:
     build:
-      context:./research-Client
+      context:./research-client
     ports:
       - 3000:3000
     volumes:
-      - ./research-Client:/usr/src/app
+      - ./research-client:/usr/src/app
 
   node:
     build:
