@@ -2,12 +2,13 @@ version: '1'
 
 services:
   react:
-    image: node:latest
+    build:
+      context: ./research-client
     ports:
       - 3000:3000
     volumes:
-      - ./research-client/package*.json:/usr/src/app
       - ./research-client:/usr/src/app
+      - ./usr/src/app/node_modules
 
   node:
     build:
@@ -16,7 +17,7 @@ services:
       - 3001:3001
     volumes:
       - ./research-server:/usr/src/app
-      - ./sur/src/app/node_modules
+      - ./usr/src/app/node_modules
   
   mysqldb:
     image: mysql:latest
