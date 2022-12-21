@@ -20,7 +20,7 @@ services:
   mysqldb:
     image: mysql:latest
     environment:
-      - MYSQL_ROOT_PASSWORD: "123456"
+      - MYSQL_ROOT_PASSWORD=123456
     ports:
       - "3306:3306" 
     volumes:
