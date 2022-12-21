@@ -2,16 +2,14 @@ version: '1'
 
 services:
   react:
-    build:
-      context:./research-client
+    image: node:latest
     ports:
       - 3000:3000
     volumes:
       - ./research-client:/usr/src/app
 
   node:
-    build:
-      context: ./research-server
+    image: node:latest
     ports:
       - 3001:3001
     volumes:
